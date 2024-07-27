@@ -1,13 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { Bounce, toast } from "react-toastify";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
     const { createUserWithEmail, UpdateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
+    const [password, setPassword] = useState(null);
 
     const {
         register,
@@ -85,7 +87,11 @@ const Register = () => {
                             <label className="label py-0">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" placeholder="Password" className="input input-bordered" name="password" {...register("password", { required: true, minLength: 6 })} />
+                            <div className="relative">
+                                <input type="password" placeholder="Password" className="input input-bordered w-full" name="password" {...register("password", { required: true, minLength: 6 })} />
+                                <FaRegEye className="absolute top-4 right-3" />
+                                <FaRegEyeSlash className="absolute top-4 right-3" />
+                            </div>
                             {errors.password && <span className="text-red-600">This field is required</span>}
                             <label className="label py-0">
                                 <p className="label-text-alt text-sm">Already have an account? <span className="text-blue-600"><Link to="/login">Please Log In</Link></span></p>
