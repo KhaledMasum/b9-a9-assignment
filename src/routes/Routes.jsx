@@ -5,11 +5,13 @@ import UpdateProfile from '../pages/UpdateProfile';
 import UserProfile from '../pages/UserProfile';
 import Login from '../pages/Authentication/Login';
 import Register from '../pages/Authentication/Register';
+import ErrorRoute from './ErrorRoute';
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement: <ErrorRoute></ErrorRoute>,
         children: [
             {
                 path: '/',

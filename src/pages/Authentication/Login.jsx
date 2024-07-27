@@ -18,10 +18,7 @@ const Login = () => {
     const onSubmit = (data) => {
         const { email, password } = data;
         signInWithEmail(email, password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                console.log(user);
-
+            .then(() => {
                 toast("User Logged In!", {
                     position: "top-right",
                     autoClose: 5000,
@@ -36,8 +33,6 @@ const Login = () => {
             })
             .catch((error) => {
                 const errorMessage = error.message;
-                console.log(errorMessage);
-
                 toast.error(errorMessage, {
                     position: "top-right",
                     autoClose: 5000,
@@ -54,9 +49,7 @@ const Login = () => {
 
     const googleSignIn = () => {
         googleLogin()
-            .then((result) => {
-                console.log(result);
-
+            .then(() => {
                 toast("User Logged In!", {
                     position: "top-right",
                     autoClose: 5000,
@@ -69,8 +62,6 @@ const Login = () => {
                     transition: Bounce,
                 });
             }).catch((error) => {
-                console.error(error);
-
                 toast.error(error, {
                     position: "top-right",
                     autoClose: 5000,
@@ -87,9 +78,7 @@ const Login = () => {
 
     const githubSignIn = () => {
         githubLogin()
-            .then((result) => {
-                console.log(result);
-
+            .then(() => {
                 toast("User Logged In!", {
                     position: "top-right",
                     autoClose: 5000,
@@ -102,8 +91,6 @@ const Login = () => {
                     transition: Bounce,
                 });
             }).catch((error) => {
-                console.error(error);
-
                 toast.error(error, {
                     position: "top-right",
                     autoClose: 5000,

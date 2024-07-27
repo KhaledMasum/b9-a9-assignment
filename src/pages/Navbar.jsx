@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider/AuthProvider";
-import { Bounce, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
@@ -14,33 +13,7 @@ const Navbar = () => {
     console.log(user);
 
     const handleLogout = () => {
-        logOut()
-            .then(() => {
-                toast.success("User Logged Out", {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                    transition: Bounce,
-                });
-            })
-            .catch(error => {
-                toast.error(error, {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                    transition: Bounce,
-                });
-            })
+        logOut();
     }
 
     return (
@@ -80,7 +53,22 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 {
-                    user ? <button onClick={handleLogout} className="btn">Log Out</button> : <Link className="btn" to="/login">Log In</Link>
+                    !user ? <Link className="btn" to="/login">Log In</Link> :
+                        <div className="dropdown dropdown-end">
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img
+                                        alt=""
+                                        src={user?.photoURL || "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"} />
+                                </div>
+                            </div>
+                            <ul
+                                tabIndex={0}
+                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                <li><a>{user?.displayName || "No user found"}</a></li>
+                                <li><button onClick={handleLogout} className="btn">Log Out</button></li>
+                            </ul>
+                        </div>
                 }
             </div>
         </div>

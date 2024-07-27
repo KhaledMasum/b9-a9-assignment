@@ -1,12 +1,13 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { Bounce, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
-    const { createUserWithEmail } = useContext(AuthContext);
+    const { createUserWithEmail, UpdateUserProfile } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const {
         register,
@@ -15,11 +16,16 @@ const Register = () => {
     } = useForm();
 
     const onSubmit = (data) => {
-        const { email, password } = data;
+        console.log(data);
+        const { name, photoUrl, email, password } = data;
         createUserWithEmail(email, password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                console.log(user);
+            .then(() => {
+                UpdateUserProfile(name, photoUrl)
+                    .then(() => {
+                        navigate('/');
+                    }).catch((error) => {
+                        console.log(error);
+                    });
 
                 toast.success("User Registered Successfully!", {
                     position: "top-right",
@@ -35,7 +41,6 @@ const Register = () => {
             })
             .catch((error) => {
                 const errorMessage = error.message;
-                console.log(errorMessage);
 
                 toast.error(errorMessage, {
                     position: "top-right",
@@ -80,7 +85,7 @@ const Register = () => {
                             <label className="label py-0">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" placeholder="Password" className="input input-bordered" name="password" {...register("password", { required: true })} />
+                            <input type="password" placeholder="Password" className="input input-bordered" name="password" {...register("password", { required: true, minLength: 6 })} />
                             {errors.password && <span className="text-red-600">This field is required</span>}
                             <label className="label py-0">
                                 <p className="label-text-alt text-sm">Already have an account? <span className="text-blue-600"><Link to="/login">Please Log In</Link></span></p>
