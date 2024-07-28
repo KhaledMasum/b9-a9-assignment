@@ -10,7 +10,6 @@ const Navbar = () => {
         <li><NavLink to="/user_profile">User Profile</NavLink></li>
     </>;
     const { user, logOut } = useContext(AuthContext);
-    console.log(user);
 
     const handleLogout = () => {
         logOut();

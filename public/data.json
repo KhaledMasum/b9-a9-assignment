@@ -1,118 +1,109 @@
 [{
-        "image": "https://via.placeholder.com/640x480",
+        "image": "/estates/estate-1.jpg",
         "estate_title": "Modern Luxury Apartment",
         "id": 1,
         "segment_name": "Apartment",
         "description": "Indulge in the epitome of urban living with this stunning modern luxury apartment. Boasting breathtaking city views, this spacious abode offers a perfect blend of style and comfort. The open floor plan seamlessly connects the living, dining, and kitchen areas, creating an airy and inviting atmosphere. High-end finishes, contemporary furnishings, and ample natural light define the interior. The apartment is equipped with state-of-the-art amenities including a fully-equipped modern kitchen, a cozy living room perfect for relaxation, and a master bedroom with an en-suite bathroom. Experience the ultimate in city living with this exceptional apartment.",
-        "price": "$350,000",
+        "price": "350,000",
         "status": "sale",
         "area": "1500 sq ft",
         "location": "Dhaka, Bangladesh",
-        "facilities": ["living room", "kitchen", "gym", "swimming pool"],
-        "view_property": "View Property"
+        "facilities": ["living room", "kitchen", "gym", "swimming pool"]
     },
     {
-        "image": "https://via.placeholder.com/640x480",
+        "image": "/estates/estate-2.jpg",
         "estate_title": "Cozy Family Home",
         "id": 2,
         "segment_name": "House",
         "description": "Discover the warmth and charm of this cozy family home, nestled in a peaceful suburban neighborhood. The perfect haven for families, this house offers a comfortable and welcoming atmosphere. The spacious living room features a cozy fireplace, ideal for gathering with loved ones. The modern kitchen is equipped with top-of-the-line appliances and ample counter space, making meal preparation a delight. Upstairs, you'll find generously sized bedrooms, each providing a tranquil retreat. The backyard is an oasis, featuring a lush green lawn perfect for outdoor activities and relaxation. This home offers a harmonious blend of comfort, style, and functionality, making it an ideal place to create lasting memories.",
-        "price": "$450,000",
+        "price": "450,000",
         "status": "sale",
         "area": "2200 sq ft",
         "location": "Suburbia, Dhaka",
-        "facilities": ["living room", "kitchen", "garden", "garage"],
-        "view_property": "View Property"
+        "facilities": ["living room", "kitchen", "garden", "garage"]
     },
     {
-        "image": "https://via.placeholder.com/640x480",
+        "image": "/estates/estate-3.jpg",
         "estate_title": "Penthouse with Rooftop Terrace",
         "id": 3,
         "segment_name": "Penthouse",
         "description": "Escape the ordinary and elevate your lifestyle in this extraordinary penthouse. With panoramic city views stretching as far as the eye can see, this exclusive residence offers an unparalleled living experience. The spacious and open-concept layout creates an ambiance of sophistication and luxury. The modern kitchen, equipped with top-of-the-line appliances, is a chef's dream. Unwind in the luxurious master suite, complete with a spa-like bathroom and a private balcony. The highlight of this penthouse is undoubtedly the rooftop terrace, an oasis in the sky perfect for entertaining guests or simply enjoying breathtaking sunsets.",
-        "price": "$800,000",
+        "price": "800,000",
         "status": "sale",
         "area": "3000 sq ft",
         "location": "Gulshan, Dhaka",
-        "facilities": ["living room", "kitchen", "gym", "swimming pool", "rooftop terrace"],
-        "view_property": "View Property"
+        "facilities": ["living room", "kitchen", "gym", "swimming pool", "rooftop terrace"]
     },
     {
-        "image": "https://via.placeholder.com/640x480",
+        "image": "/estates/estate-4.jpg",
         "estate_title": "Luxurious Villa",
         "id": 4,
         "segment_name": "Villa",
         "description": "Indulge in the ultimate luxury with this magnificent villa, nestled amidst lush greenery. The grand entrance foyer sets the tone for the opulence that awaits within. The spacious living room, adorned with elegant furnishings and large windows, offers a serene ambiance. The gourmet kitchen, equipped with state-of-the-art appliances, is a culinary haven. Unwind in the luxurious master suite, complete with a spa-like bathroom and a private balcony. The highlight of this villa is the outdoor oasis, featuring a sparkling swimming pool, a manicured lawn, and a covered patio perfect for al fresco dining.",
-        "price": "$1,200,000",
+        "price": "1,200,000",
         "status": "sale",
         "area": "4500 sq ft",
         "location": "Uttara, Dhaka",
-        "facilities": ["living room", "kitchen", "swimming pool", "gym", "home theater"],
-        "view_property": "View Property"
+        "facilities": ["living room", "kitchen", "swimming pool", "gym", "home theater"]
     },
     {
-        "image": "https://via.placeholder.com/640x480",
+        "image": "/estates/estate-5.jpg",
         "estate_title": "Modern Studio Apartment",
         "id": 5,
         "segment_name": "Apartment",
         "description": "Embrace urban living in this stylish and modern studio apartment. Perfect for young professionals or individuals seeking a low-maintenance lifestyle, this apartment offers a perfect blend of functionality and style. The open-concept layout maximizes space, creating a bright and airy atmosphere. The modern kitchen is equipped with essential appliances, making meal preparation a breeze. The living area is versatile, providing a comfortable space for relaxation and entertainment. Enjoy the convenience of city living with easy access to shops, restaurants, and public transportation.",
-        "price": "$250,000",
+        "price": "250,000",
         "status": "sale",
         "area": "600 sq ft",
         "location": "Banani, Dhaka",
-        "facilities": ["living room/bedroom", "kitchenette"],
-        "view_property": "View Property"
+        "facilities": ["living room/bedroom", "kitchenette"]
     },
     {
-        "image": "https://via.placeholder.com/640x480",
+        "image": "/estates/estate-6.jpg",
         "estate_title": "Spacious Family Apartment",
         "id": 6,
         "segment_name": "Apartment",
         "description": "This spacious family apartment offers the perfect blend of comfort and convenience. With multiple bedrooms and ample living space, this home provides plenty of room for everyone. The well-appointed kitchen is ideal for family meals, while the cozy living room is perfect for relaxation. The apartment's location offers easy access to schools, parks, and shopping centers, making it an ideal choice for families. Enjoy the convenience of apartment living without sacrificing space or comfort.",
-        "price": "$400,000",
+        "price": "400,000",
         "status": "rent",
         "area": "1800 sq ft",
         "location": "Mirpur, Dhaka",
-        "facilities": ["living room", "kitchen", "children's play area"],
-        "view_property": "View Property"
+        "facilities": ["living room", "kitchen", "children's play area"]
     },
     {
-        "image": "https://via.placeholder.com/640x480",
+        "image": "/estates/estate-7.jpg",
         "estate_title": "Duplex with Garden",
         "id": 7,
         "segment_name": "Duplex",
         "description": "Experience the best of both worlds in this unique duplex with a private garden. The lower level offers a spacious living area, perfect for entertaining guests, while the upper level provides a peaceful retreat with multiple bedrooms. The modern kitchen is a chef's dream, with ample counter space and top-of-the-line appliances. The private garden is an oasis of tranquility, offering a perfect escape from the hustle and bustle of city life. This duplex combines the charm of a single-family home with the convenience of apartment living.",
-        "price": "$650,000",
+        "price": "650,000",
         "status": "sale",
         "area": "2500 sq ft",
         "location": "Bashundhara, Dhaka",
-        "facilities": ["living room", "kitchen", "garden", "home office"],
-        "view_property": "View Property"
+        "facilities": ["living room", "kitchen", "garden", "home office"]
     },
     {
-        "image": "https://via.placeholder.com/640x480",
+        "image": "/estates/estate-8.jpg",
         "estate_title": "Lakefront Bungalow",
         "id": 8,
         "segment_name": "Bungalow",
         "description": "Embrace the serenity of lakeside living in this charming bungalow. Nestled on the shores of a tranquil lake, this home offers a peaceful retreat from the hustle and bustle of city life. The spacious living room features large windows that offer stunning lake views. The cozy fireplace creates a warm and inviting atmosphere, perfect for relaxing evenings. The modern kitchen is equipped with top-of-the-line appliances, making meal preparation a delight. The highlight of this bungalow is the private dock, providing direct access to the lake for boating, fishing, or simply enjoying the water views.",
-        "price": "$900,000",
+        "price": "900,000",
         "status": "sale",
         "area": "3500 sq ft",
         "location": "Narayanganj, Dhaka",
-        "facilities": ["living room", "kitchen", "garden", "private dock"],
-        "view_property": "View Property"
+        "facilities": ["living room", "kitchen", "garden", "private dock"]
     },
     {
-        "image": "https://via.placeholder.com/640x480",
+        "image": "/estates/estate-9.jpg",
         "estate_title": "Farmhouse with Land",
         "id": 9,
         "segment_name": "Farmhouse",
         "description": "Escape the city and embrace a country lifestyle in this spacious farmhouse. Surrounded by lush greenery and ample land, this home offers a tranquil retreat. The farmhouse features a classic charm with modern amenities, providing a comfortable and inviting atmosphere. The spacious living room features a cozy fireplace, perfect for gathering with loved ones. The modern kitchen is equipped with essential appliances, making meal preparation a breeze. Enjoy the freedom of outdoor living with a large backyard, perfect for gardening, entertaining, or simply relaxing. This farmhouse offers a unique opportunity to experience the peace and quiet of country life.",
-        "price": "$1,500,000",
+        "price": "1,500,000",
         "status": "sale",
         "area": "5000 sq ft",
         "location": "Gazipur, Dhaka",
-        "facilities": ["living room", "kitchen", "garden", "barn"],
-        "view_property": "View Property"
+        "facilities": ["living room", "kitchen", "garden", "barn"]
     }
 ]
