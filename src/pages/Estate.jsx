@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { FaDollarSign, FaChartArea } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Estate = ({ estate }) => {
-    const { image, estate_title, description, area, price, status } = estate;
-    console.log(estate_title);
+    const { id, image, estate_title, description, area, price, status } = estate;
     return (
         <div className="card glass hover:scale-95 transition duration-500">
             <figure>
@@ -27,7 +27,7 @@ const Estate = ({ estate }) => {
                 <hr className="border-t-1 border-dashed border-slate-400" />
                 <div className="card-actions justify-between items-center">
                     <p className='text-md font-medium'>Status: {status}</p>
-                    <button className="btn btn-outline btn-primary">View Property</button>
+                    <Link to={`/estate/${id}`}><button className="btn btn-outline btn-primary">View Property</button></Link>
                 </div>
             </div>
         </div>
