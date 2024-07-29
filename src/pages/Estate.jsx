@@ -1,11 +1,18 @@
+// import Aos from 'aos';
 import PropTypes from 'prop-types';
 import { FaDollarSign, FaChartArea } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 const Estate = ({ estate }) => {
     const { id, image, estate_title, description, area, price, status } = estate;
+    useEffect(() => {
+        Aos.init();
+    }, [])
     return (
-        <div className="card glass hover:scale-95 transition duration-500">
+        <div className="card glass hover:scale-95 transition duration-500" data-aos="zoom-out" data-aos-duration="1000">
             <figure>
                 <img
                     src={image}

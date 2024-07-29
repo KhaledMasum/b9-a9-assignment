@@ -58,6 +58,12 @@ const AuthProvider = ({ children }) => {
         };
     }, []);
 
+    function DocumentTitle(title) {
+        useEffect(() => {
+            document.title = title;
+        }, [title]);
+    }
+
     const authInfo = {
         createUserWithEmail,
         UpdateUserProfile,
@@ -66,7 +72,8 @@ const AuthProvider = ({ children }) => {
         googleLogin,
         githubLogin,
         user,
-        loading
+        loading,
+        DocumentTitle
     }
 
     return (

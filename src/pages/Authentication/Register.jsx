@@ -7,10 +7,12 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
-    const { createUserWithEmail, UpdateUserProfile } = useContext(AuthContext);
+    const { createUserWithEmail, UpdateUserProfile, DocumentTitle } = useContext(AuthContext);
     const navigate = useNavigate();
     const [password, setPassword] = useState(null);
     const [passwordType, setPasswordType] = useState('password');
+
+    DocumentTitle("Register");
 
     const {
         register,

@@ -7,7 +7,7 @@ import { Bounce, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-    const { signInWithEmail, googleLogin, githubLogin } = useContext(AuthContext);
+    const { signInWithEmail, googleLogin, githubLogin, DocumentTitle } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     const {
@@ -15,6 +15,8 @@ const Login = () => {
         handleSubmit,
         formState: { errors },
     } = useForm();
+
+    DocumentTitle("Login");
 
     const onSubmit = (data) => {
         const { email, password } = data;
