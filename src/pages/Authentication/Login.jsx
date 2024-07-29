@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
@@ -8,7 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const { signInWithEmail, googleLogin, githubLogin } = useContext(AuthContext);
-
+    const location = useLocation();
+    const navigate = useNavigate();
     const {
         register,
         handleSubmit,
@@ -18,7 +19,7 @@ const Login = () => {
     const onSubmit = (data) => {
         const { email, password } = data;
         signInWithEmail(email, password)
-            .then(() => {
+            .then((result) => {
                 toast("User Logged In!", {
                     position: "top-right",
                     autoClose: 5000,
@@ -30,6 +31,9 @@ const Login = () => {
                     theme: "light",
                     transition: Bounce,
                 });
+                if (result.user) {
+                    navigate(location?.state || '/');
+                }
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -49,7 +53,7 @@ const Login = () => {
 
     const googleSignIn = () => {
         googleLogin()
-            .then(() => {
+            .then((result) => {
                 toast("User Logged In!", {
                     position: "top-right",
                     autoClose: 5000,
@@ -61,6 +65,9 @@ const Login = () => {
                     theme: "light",
                     transition: Bounce,
                 });
+                if (result.user) {
+                    navigate(location?.state || '/');
+                }
             }).catch((error) => {
                 toast.error(error, {
                     position: "top-right",
@@ -78,7 +85,7 @@ const Login = () => {
 
     const githubSignIn = () => {
         githubLogin()
-            .then(() => {
+            .then((result) => {
                 toast("User Logged In!", {
                     position: "top-right",
                     autoClose: 5000,
@@ -90,6 +97,9 @@ const Login = () => {
                     theme: "light",
                     transition: Bounce,
                 });
+                if (result.user) {
+                    navigate(location?.state || '/');
+                }
             }).catch((error) => {
                 toast.error(error, {
                     position: "top-right",
