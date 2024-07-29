@@ -10,11 +10,14 @@ const GithubProvider = new GithubAuthProvider();
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+
     const createUserWithEmail = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
     const UpdateUserProfile = (name, image) => {
+        setLoading(true);
         return updateProfile(auth.currentUser, {
             displayName: name,
             photoURL: image
@@ -28,6 +31,7 @@ const AuthProvider = ({ children }) => {
 
     const logOut = () => {
         setUser(null);
+        setLoading(true);
         return signOut(auth);
     }
 

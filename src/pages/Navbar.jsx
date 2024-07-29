@@ -10,6 +10,7 @@ const Navbar = () => {
         <li><NavLink to="/user_profile">User Profile</NavLink></li>
     </>;
     const { user, logOut } = useContext(AuthContext);
+    console.log(user);
 
     const handleLogout = () => {
         logOut();
@@ -63,7 +64,7 @@ const Navbar = () => {
                             </div>
                             <ul
                                 tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[100] mt-3 w-52 p-2 shadow">
                                 <li><a>{user?.displayName || "No user found"}</a></li>
                                 <li><button onClick={handleLogout} className="btn">Log Out</button></li>
                             </ul>

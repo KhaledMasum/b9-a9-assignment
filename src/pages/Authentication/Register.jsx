@@ -10,12 +10,25 @@ const Register = () => {
     const { createUserWithEmail, UpdateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
     const [password, setPassword] = useState(null);
+    const [passwordType, setPasswordType] = useState('password');
 
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
+
+    const handleIconToggle = () => {
+        if (passwordType == 'password') {
+            setPasswordType('text')
+            return;
+        }
+        setPasswordType('password');
+    };
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+    }
 
     const onSubmit = (data) => {
         console.log(data);
@@ -88,9 +101,10 @@ const Register = () => {
                                 <span className="label-text">Password</span>
                             </label>
                             <div className="relative">
-                                <input type="password" placeholder="Password" className="input input-bordered w-full" name="password" {...register("password", { required: true, minLength: 6 })} />
-                                <FaRegEye className="absolute top-4 right-3" />
-                                <FaRegEyeSlash className="absolute top-4 right-3" />
+                                <input type={passwordType} onChange={handlePasswordChange} value={password} placeholder="Password" className="input input-bordered w-full" name="password" {...register("password", { required: true, minLength: 6 })} />
+                                {
+                                    passwordType == 'password' ? <FaRegEyeSlash className="absolute top-4 right-3" onClick={handleIconToggle} /> : <FaRegEye className="absolute top-4 right-3" onClick={handleIconToggle} />
+                                }
                             </div>
                             {errors.password && <span className="text-red-600">This field is required</span>}
                             <label className="label py-0">

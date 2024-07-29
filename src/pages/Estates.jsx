@@ -9,8 +9,6 @@ const Estates = () => {
             .then(data => setEstates(data))
     }, []);
 
-    // console.log(estates);
-
     return (
         <div className="max-w-6xl mx-auto">
             <h2 className="font-semibold text-4xl text-center my-4">Estates List</h2>
