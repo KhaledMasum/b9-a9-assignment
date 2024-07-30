@@ -13,6 +13,3 @@ NPM Packages:
 -Animate on scroll(AOS)
 -React hook form
 -Swiper Slider
--React Icons
--React Toastify
--React PropTypes
