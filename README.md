@@ -1,8 +1,18 @@
-# React + Vite
+Website name: Skyline Residences
+Live URL: https://b9-a9-assignment.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features and characteristics:
+-User Registration
+-User login with email and password
+-User login with Google and GitHub
+-Update user profile
+-View estates list 
+-View estates details
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+NPM Packages:
+-Animate on scroll(AOS)
+-React hook form
+-Swiper Slider
+-React Icons
+-React Toastify
+-React PropTypes
