@@ -6,7 +6,7 @@ const AboutUs = () => {
     const { DocumentTitle } = useContext(AuthContext);
     DocumentTitle("About Us");
     return (
-        <div className="card grid sm:grid-cols-2 lg:card-side bg-base-100 shadow-xl rounded-none sm:rounded-2xl max-w-6xl mx-auto my-10">
+        <div className="card grid lg:grid-cols-2 lg:card-side bg-base-100 shadow-xl rounded-none lg:rounded-2xl max-w-6xl mx-auto lg:my-10">
             <figure><img src={aboutUs} className="h-full" alt="Album" /></figure>
             <div className="card-body p-4">
                 <h2 className="card-title">About Us</h2>

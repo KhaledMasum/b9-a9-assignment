@@ -7,7 +7,7 @@ const EstateDetails = () => {
     const estate = estateData.find(estate => estate.id === idInt);
 
     return (
-        <div className="card grid sm:grid-cols-2 lg:card-side bg-base-100 shadow-xl rounded-none sm:rounded-2xl max-w-6xl mx-auto my-10">
+        <div className="card grid lg:grid-cols-2 lg:card-side bg-base-100 shadow-xl rounded-none lg:rounded-2xl max-w-6xl mx-auto sm:my-10">
             <figure><img src={estate.image} className="h-full" alt="Album" /></figure>
             <div className="card-body p-4">
                 <h2 className="card-title">{estate.estate_title}</h2>

@@ -34,7 +34,7 @@ const Login = () => {
                     transition: Bounce,
                 });
                 if (result.user) {
-                    navigate(location?.state || '/');
+                    navigate(location?.state ? location.state : '/');
                 }
             })
             .catch((error) => {
@@ -118,9 +118,9 @@ const Login = () => {
     }
 
     return (
-        <div className="hero bg-base-200 min-h-screen">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="card bg-base-100 w-80 shrink-0 shadow-2xl">
+        <div className="hero bg-base-200 lg:min-h-screen">
+            <div className="hero-content flex-col lg:flex-row-reverse w-full">
+                <div className="card bg-base-100 shrink-0 shadow-2xl w-full sm:w-1/2 lg:w-80">
                     <form className="card-body pb-0" onSubmit={handleSubmit(onSubmit)}>
                         <h2 className="text-2xl font-semibold text-center">Please Log In</h2>
                         <div className="form-control">
