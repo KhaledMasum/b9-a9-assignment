@@ -18,7 +18,7 @@ const Estate = ({ estate }) => {
                     src={image}
                     alt="car!" />
             </figure>
-            <div className="card-body">
+            <div className="card-body p-4">
                 <h2 className="card-title">{estate_title}</h2>
                 <p className='text-justify'>{description.length >= 100 ? description.slice(0, 100) : description}</p>
                 <div className="flex justify-between">

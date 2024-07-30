@@ -7,7 +7,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
-    const { createUserWithEmail, DocumentTitle } = useContext(AuthContext);
+    const { createUserWithEmail, UpdateUserProfile, DocumentTitle } = useContext(AuthContext);
     const navigate = useNavigate();
     const [password, setPassword] = useState(null);
     const [passwordType, setPasswordType] = useState('password');
@@ -33,11 +33,16 @@ const Register = () => {
     }
 
     const onSubmit = (data) => {
-        console.log(data);
-        const { email, password } = data;
+        const { name, photoUrl, email, password } = data;
         createUserWithEmail(email, password)
             .then(() => {
-                navigate('/');
+                UpdateUserProfile(name, photoUrl)
+                    .then(() => {
+                        navigate('/');
+                    })
+                    .catch(() => {
+
+                    });
                 toast.success("User Registered Successfully!", {
                     position: "top-right",
                     autoClose: 5000,
@@ -52,7 +57,6 @@ const Register = () => {
             })
             .catch((error) => {
                 const errorMessage = error.message;
-
                 toast.error(errorMessage, {
                     position: "top-right",
                     autoClose: 5000,
