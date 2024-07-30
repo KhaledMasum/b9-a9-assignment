@@ -1,12 +1,13 @@
 import Root from '../layouts/Root/Root';
 import { createBrowserRouter } from "react-router-dom";
 import Home from '../pages/Home';
-import UpdateProfile from '../pages/UpdateProfile';
 import Login from '../pages/Authentication/Login';
 import Register from '../pages/Authentication/Register';
 import ErrorRoute from './ErrorRoute';
 import EstateDetails from '../pages/EstateDetails';
 import PrivateRoutes from './PrivateRoutes';
+import UpdateProfile from '../pages/Authentication/UpdateProfile';
+import AboutUs from '../pages/AboutUs';
 
 const router = createBrowserRouter([
     {
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/update_profile',
-                element: <UpdateProfile></UpdateProfile>
+                element: <PrivateRoutes><UpdateProfile></UpdateProfile></PrivateRoutes>
             },
             {
                 path: '/login',
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
                 path: '/estate/:id',
                 element: <PrivateRoutes><EstateDetails></EstateDetails></PrivateRoutes>,
                 loader: () => fetch('data.json')
+            },
+            {
+                path: '/about_us',
+                element: <PrivateRoutes><AboutUs></AboutUs></PrivateRoutes>
             }
         ]
     },

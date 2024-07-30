@@ -4,12 +4,12 @@ import { AuthContext } from "../providers/AuthProvider/AuthProvider";
 import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
     const navlinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/update_profile">Update Profile</NavLink></li>
+        <li><NavLink to="/about_us">About Us</NavLink></li>
     </>;
-    const { user, logOut } = useContext(AuthContext);
-    console.log(user);
 
     const handleLogout = () => {
         logOut();
